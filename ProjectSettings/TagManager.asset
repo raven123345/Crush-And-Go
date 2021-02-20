@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Player_One
+  - Player_Two
+  - Hittable
+  - Enemy
+  - Breakable
+  - Weapon
+  - LevelBorder
+  - LevelProps
+  - CameraTrigger
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - CarColliders
+  - WheelColliders
+  - Not Rendered
+  - Parts
+  - UI_PL_ONE
+  - UI_PL_TWO
+  - Weapons
+  - LevelObjects
+  - Terrain
+  - Gizmos
+  - Environment
+  - 3DMenus
+  - Houdini_Curves
+  - MiniMap
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
