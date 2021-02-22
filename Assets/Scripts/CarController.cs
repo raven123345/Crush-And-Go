@@ -117,11 +117,11 @@ public class CarController : MonoBehaviour
     {
         if (player == cc_Player.Player_One)
         {
-            ResetCar(playerOnePrefix);
+            
         }
         else if (player == cc_Player.Player_Two)
         {
-            ResetCar(playerTwoPrefix);
+            
         }
 
         if (hasWeapon)
@@ -131,10 +131,13 @@ public class CarController : MonoBehaviour
 
         if (player == cc_Player.Player_One)
         {
+
             if (Input.GetButtonDown(playerOnePrefix + "DestroyWeapon"))
             {
                 DestroyWeapon();
             }
+            ResetCar(playerOnePrefix);
+            Accelerate(playerOnePrefix);
         }
         else
         {
@@ -142,6 +145,34 @@ public class CarController : MonoBehaviour
             {
                 DestroyWeapon();
             }
+            Accelerate(playerTwoPrefix);
+            ResetCar(playerTwoPrefix);
+        }
+    }
+
+    void Accelerate(string controlPrefix)
+    {
+        if (Input.GetButton(controlPrefix + "Accelerate") && reverse_counter <= 0f && accelerate >= 0f)
+        {
+            accelerate = 1f;
+        }
+        else if (Input.GetButton(controlPrefix + "Accelerate"))
+        {
+            accelerate = -1f;
+        }
+        else
+        {
+            accelerate = 0f;
+        }
+
+        if (Input.GetButtonUp(controlPrefix + "Accelerate"))
+        {
+            reverse_counter = reverse_treshold;
+        }
+
+        if (reverse_counter > 0f)
+        {
+            reverse_counter -= Time.deltaTime;
         }
     }
 
@@ -193,31 +224,7 @@ public class CarController : MonoBehaviour
 
             //Debug.DrawRay(transform.position, dir * vector_length * 2f, Color.blue);
 
-            if (Input.GetButton(controlPrefix + "Accelerate") && reverse_counter <= 0f && accelerate >= 0f)
-            {
-                accelerate = 1f;
-            }
-            else if (Input.GetButton(controlPrefix + "Accelerate"))
-            {
-                accelerate = -1f;
-            }
-            else
-            {
-                accelerate = 0f;
-            }
-
-            if (Input.GetButtonUp(controlPrefix + "Accelerate"))
-            {
-                reverse_counter = reverse_treshold;
-
-                if (player == cc_Player.Player_One)
-                    Debug.Log("Button up");
-            }
-
-            if (reverse_counter > 0f)
-            {
-                reverse_counter -= Time.deltaTime;
-            }
+     
 
             foreach (Wheel wheel in wheels)
             {
