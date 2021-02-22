@@ -41,6 +41,8 @@ public class CarController : MonoBehaviour
     [SerializeField]
     private float brake = 50f;
     [SerializeField]
+    float reverse_treshold = 0.1f;
+    [SerializeField]
     private float resetCountDown = .5f;
     [SerializeField]
     private float minDamageSpeedTreshold = 10f;
@@ -67,6 +69,10 @@ public class CarController : MonoBehaviour
     float engine_max_pitch = 2.5f;
     [SerializeField]
     float init_volume = 0.5f;
+
+    float accelerate = 0f;
+
+    float reverse_counter;
 
 
     // Start is called before the first frame update
@@ -137,9 +143,6 @@ public class CarController : MonoBehaviour
                 DestroyWeapon();
             }
         }
-
-
-        //Debug.Log("Velocity of car" + gameObject.name + " : " + Mathf.Abs(Vector3.Magnitude(rb.velocity)));
     }
 
     private void FixedUpdate()
@@ -163,8 +166,6 @@ public class CarController : MonoBehaviour
             audio_source.clip = GameManager.instance.sound_effects[index];
             audio_source.Play();
         }
-
-
     }
     public void SetCanvasCamera(Camera camera_for_me, Camera camera_for_other)
     {
@@ -192,14 +193,41 @@ public class CarController : MonoBehaviour
 
             //Debug.DrawRay(transform.position, dir * vector_length * 2f, Color.blue);
 
+            if (Input.GetButton(controlPrefix + "Accelerate") && reverse_counter <= 0f && accelerate >= 0f)
+            {
+                accelerate = 1f;
+            }
+            else if (Input.GetButton(controlPrefix + "Accelerate"))
+            {
+                accelerate = -1f;
+            }
+            else
+            {
+                accelerate = 0f;
+            }
+
+            if (Input.GetButtonUp(controlPrefix + "Accelerate"))
+            {
+                reverse_counter = reverse_treshold;
+
+                if (player == cc_Player.Player_One)
+                    Debug.Log("Button up");
+            }
+
+            if (reverse_counter > 0f)
+            {
+                reverse_counter -= Time.deltaTime;
+            }
+
             foreach (Wheel wheel in wheels)
             {
-                wheel.torque = Mathf.Lerp(wheel._wheelCollider.motorTorque, Mathf.Sign(Input.GetAxis(controlPrefix + "Reverse")) * dir.sqrMagnitude * speed, Time.deltaTime * acceleration);
-                wheel.steerAngle = Mathf.Lerp(wheel._wheelCollider.steerAngle, steer_dir, Time.deltaTime * steerSpeed); 
+                wheel.torque = Mathf.Lerp(wheel._wheelCollider.motorTorque, accelerate * speed, Time.deltaTime * acceleration);
+                wheel.steerAngle = Mathf.Lerp(wheel._wheelCollider.steerAngle, steer_dir, Time.deltaTime * steerSpeed);
                 audio_source.pitch = Mathf.Lerp(1f, engine_max_pitch, rb.velocity.sqrMagnitude / speed);
                 audio_source.volume = Mathf.Lerp(init_volume, 1f, rb.velocity.sqrMagnitude / speed);
 
-                if (Input.GetButton(controlPrefix + "HandBrake"))
+
+                if (Input.GetButton(controlPrefix + "Brake"))
                 {
                     wheel.frontBrakeTorque = brake;
                     wheel.rearBrakeTorque = brake;
