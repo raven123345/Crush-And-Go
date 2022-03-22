@@ -5,7 +5,7 @@ using UnityEngine;
 public class Wheel : MonoBehaviour
 {
 
-    public bool activeWheel;
+    public bool torqueWheel;
     public bool steerWheel;
     public bool frontWheel;
 
@@ -40,19 +40,13 @@ public class Wheel : MonoBehaviour
         public float maxSize = 6f;
 
     }
-    public ParticleProperties p_properties;
+    public ParticleProperties particleProperties;
 
-
-    [SerializeField]
-    bool showDebug = false;
-
-    // Start is called before the first frame update
     void Start()
     {
         _wheelCollider = GetComponent<WheelCollider>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         Vector3 pos = Vector3.zero;
@@ -65,10 +59,9 @@ public class Wheel : MonoBehaviour
         GenerateDust();
         GenerateTrails();
     }
-
     private void FixedUpdate()
     {
-        if (activeWheel)
+        if (torqueWheel)
         {
             _wheelCollider.motorTorque = torque;
         }
@@ -89,13 +82,13 @@ public class Wheel : MonoBehaviour
     {
         if (dust)
         {
-            float n_velocity = Mathf.Abs(_wheelCollider.rpm) / p_properties.maxRPM;
+            float n_velocity = Mathf.Abs(_wheelCollider.rpm) / particleProperties.maxRPM;
             var emission = dust.emission;
             var size = dust.main;
-            if (_wheelCollider.isGrounded && Mathf.Abs(_wheelCollider.rpm) > p_properties.minRPM)
+            if (_wheelCollider.isGrounded && Mathf.Abs(_wheelCollider.rpm) > particleProperties.minRPM)
             {
-                emission.rateOverTime = n_velocity * p_properties.maxRate;
-                size.startSizeMultiplier = n_velocity * p_properties.maxSize;
+                emission.rateOverTime = n_velocity * particleProperties.maxRate;
+                size.startSizeMultiplier = n_velocity * particleProperties.maxSize;
             }
             else
             {

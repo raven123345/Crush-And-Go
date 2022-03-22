@@ -10,7 +10,6 @@ public class CarController : MonoBehaviour
     {
         Player_One, Player_Two
     };
-
     [HideInInspector]
     public Camera camera;
 
