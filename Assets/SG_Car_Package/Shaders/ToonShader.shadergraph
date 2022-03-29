@@ -1,5 +1,5 @@
 {
-    "m_SGVersion": 3,
+    "m_SGVersion": 2,
     "m_Type": "UnityEditor.ShaderGraph.GraphData",
     "m_ObjectId": "8be7e3238481497f96fc57ac8c56ea1b",
     "m_Properties": [
@@ -23,12 +23,6 @@
         }
     ],
     "m_Keywords": [],
-    "m_Dropdowns": [],
-    "m_CategoryData": [
-        {
-            "m_Id": "4d1332e775a24b13b5ca880324e87a30"
-        }
-    ],
     "m_Nodes": [
         {
             "m_Id": "1359d59e960e4cf1a6692af6643128ef"
@@ -331,11 +325,10 @@
         "serializedMesh": {
             "m_SerializedMesh": "{\"mesh\":{\"instanceID\":0}}",
             "m_Guid": ""
-        },
-        "preventRotation": false
+        }
     },
     "m_Path": "Shader Graphs",
-    "m_GraphPrecision": 0,
+    "m_ConcretePrecision": 0,
     "m_PreviewMode": 2,
     "m_OutputNode": {
         "m_Id": ""
@@ -355,13 +348,9 @@
         "m_GuidSerialized": "1e96020f-6a92-4ea2-8acc-dfc68f1be5a5"
     },
     "m_Name": "SpecPower",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "SpecPower",
     "m_DefaultReferenceName": "_SpecPower",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -446,13 +435,9 @@
         "m_GuidSerialized": "18597719-b6e6-409e-b972-2bc5e01ea53d"
     },
     "m_Name": "Smoothenss",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Smoothenss",
     "m_DefaultReferenceName": "_Smoothenss",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -796,7 +781,7 @@
     "m_SlotType": 0,
     "m_Hidden": false,
     "m_ShaderOutputName": "_SpecPower",
-    "m_StageCapability": 3,
+    "m_StageCapability": 2,
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
@@ -1075,17 +1060,11 @@
     "m_ActiveSubTarget": {
         "m_Id": "3d5a307488b54b9f8017712d8305f5ef"
     },
-    "m_AllowMaterialOverride": false,
     "m_SurfaceType": 0,
-    "m_ZTestMode": 4,
-    "m_ZWriteControl": 0,
     "m_AlphaMode": 3,
-    "m_RenderFace": 2,
+    "m_TwoSided": false,
     "m_AlphaClip": true,
-    "m_CastShadows": true,
-    "m_ReceiveShadows": true,
-    "m_CustomEditorGUI": "",
-    "m_SupportVFX": false
+    "m_CustomEditorGUI": ""
 }
 
 {
@@ -1496,8 +1475,7 @@
         "m_SerializableColors": []
     },
     "m_TextureType": 0,
-    "m_NormalMapSpace": 0,
-    "m_EnableGlobalMipBias": true
+    "m_NormalMapSpace": 0
 }
 
 {
@@ -1922,13 +1900,9 @@
         "m_GuidSerialized": "79888416-c045-47eb-91e9-cd586d1d3530"
     },
     "m_Name": "Color",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Color",
     "m_DefaultReferenceName": "_Color",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -1939,7 +1913,6 @@
         "b": 1.0,
         "a": 0.0
     },
-    "isMainColor": false,
     "m_ColorMode": 0
 }
 
@@ -2092,13 +2065,9 @@
         "m_GuidSerialized": "337f1266-9659-48cf-b271-37761900a7d7"
     },
     "m_Name": "Main texture",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Main texture",
     "m_DefaultReferenceName": "_Main_texture",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -2107,8 +2076,6 @@
         "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
         "m_Guid": ""
     },
-    "isMainTexture": false,
-    "useTilingAndOffset": false,
     "m_Modifiable": true,
     "m_DefaultType": 0
 }
@@ -2167,9 +2134,7 @@
         -451819953,
         203944492,
         42376519
-    ],
-    "m_Dropdowns": [],
-    "m_DropdownSelectedEntries": []
+    ]
 }
 
 {
@@ -2303,13 +2268,9 @@
         "m_GuidSerialized": "e6809ce4-6ae3-488e-90fc-f28fbc27c5a6"
     },
     "m_Name": "SpecularColor",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "SpecularColor",
     "m_DefaultReferenceName": "_SpecularColor",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -2320,7 +2281,6 @@
         "b": 0.0,
         "a": 0.0
     },
-    "isMainColor": false,
     "m_ColorMode": 0
 }
 
@@ -2404,13 +2364,9 @@
         "m_GuidSerialized": "0529de48-3665-4016-b192-a7c42a499db0"
     },
     "m_Name": "Ramp",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Ramp",
     "m_DefaultReferenceName": "_Ramp",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -2419,8 +2375,6 @@
         "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"da0b9de11a0ca974383a5b83c08cfc3d\",\"type\":3}}",
         "m_Guid": ""
     },
-    "isMainTexture": false,
-    "useTilingAndOffset": false,
     "m_Modifiable": true,
     "m_DefaultType": 0
 }

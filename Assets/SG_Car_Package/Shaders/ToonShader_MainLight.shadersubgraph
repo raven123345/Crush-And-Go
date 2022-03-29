@@ -1,5 +1,5 @@
 {
-    "m_SGVersion": 3,
+    "m_SGVersion": 2,
     "m_Type": "UnityEditor.ShaderGraph.GraphData",
     "m_ObjectId": "72b2ea7dbc1942029bb8c09dcd35b44d",
     "m_Properties": [
@@ -17,12 +17,6 @@
         }
     ],
     "m_Keywords": [],
-    "m_Dropdowns": [],
-    "m_CategoryData": [
-        {
-            "m_Id": "fc216817ff8a4427b0ba75dea1c55340"
-        }
-    ],
     "m_Nodes": [
         {
             "m_Id": "9f946adeedc44a01a2751fe7a73b9f60"
@@ -581,11 +575,10 @@
         "serializedMesh": {
             "m_SerializedMesh": "{\"mesh\":{\"instanceID\":0}}",
             "m_Guid": ""
-        },
-        "preventRotation": false
+        }
     },
     "m_Path": "Sub Graphs",
-    "m_GraphPrecision": 1,
+    "m_ConcretePrecision": 0,
     "m_PreviewMode": 2,
     "m_OutputNode": {
         "m_Id": "9f946adeedc44a01a2751fe7a73b9f60"
@@ -833,13 +826,9 @@
         "m_GuidSerialized": "14f53f34-cedd-445a-96f9-d63fd7931549"
     },
     "m_Name": "Ramp",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Ramp",
     "m_DefaultReferenceName": "_Ramp",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -848,8 +837,6 @@
         "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
         "m_Guid": ""
     },
-    "isMainTexture": false,
-    "useTilingAndOffset": false,
     "m_Modifiable": true,
     "m_DefaultType": 0
 }
@@ -862,13 +849,9 @@
         "m_GuidSerialized": "da17bb59-762c-4997-bbeb-4c55e2d4ebca"
     },
     "m_Name": "SpecularColor",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "SpecularColor",
     "m_DefaultReferenceName": "_SpecularColor",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -879,7 +862,6 @@
         "b": 0.0,
         "a": 0.0
     },
-    "isMainColor": false,
     "m_ColorMode": 0
 }
 
@@ -1084,8 +1066,7 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     },
-    "m_Space": 2,
-    "m_PositionSource": 0
+    "m_Space": 2
 }
 
 {
@@ -1240,13 +1221,9 @@
         "m_GuidSerialized": "b86e6d1a-2dca-48fa-aaf0-8b573d2d99a5"
     },
     "m_Name": "SpecPower",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "SpecPower",
     "m_DefaultReferenceName": "_SpecPower",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -1291,8 +1268,7 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     },
-    "m_Space": 2,
-    "m_PositionSource": 0
+    "m_Space": 2
 }
 
 {
@@ -2312,8 +2288,7 @@
         "m_SerializableColors": []
     },
     "m_TextureType": 0,
-    "m_NormalMapSpace": 0,
-    "m_EnableGlobalMipBias": true
+    "m_NormalMapSpace": 0
 }
 
 {
@@ -3247,13 +3222,9 @@
         "m_GuidSerialized": "17e4dc3f-3022-43b1-913d-5583c3171132"
     },
     "m_Name": "Smoothness",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Smoothness",
     "m_DefaultReferenceName": "_Smoothness",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
